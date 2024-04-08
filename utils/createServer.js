@@ -3,6 +3,8 @@ const server = express();
 
 import recipesRouter from "../routers/recipesRouter.js";
 
+server.use(express.json());
+
 server.get("/", (req, res) => {
   res.send("Welcome!");
 });

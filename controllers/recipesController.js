@@ -1,4 +1,6 @@
 export function generateRecipes(req, res) {
+  const { ingredients, restrictions } = req.body;
+
   res.send("some recipes");
 }
 
