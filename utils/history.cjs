@@ -19,7 +19,7 @@ const history = [
     role: "user",
     parts: [
       {
-        text: "Constraint - You must follow a specific format that I will provide on next prompt as precise as you can for your answers. You must include keywords like recipe title, ingredients, Instructions, note.",
+        text: "Constraint - You must follow a specific format that I will provide on next prompt as precise as you can for recipes in your answers.",
       },
     ],
   },
@@ -35,7 +35,13 @@ const history = [
     role: "user",
     parts: [
       {
-        text: "Here is format for your answers. Recipe title - Name of the recipe, Ingredients - Ingredients for the recipe. Instructions - Instructions for the recipe. Note - How recipe matches the dietary restrictions provided.",
+        text: `
+        recipe name - name of the recipe
+        ingredients - actual ingredients
+        instructions - actual instructions
+        note - note on how this recipe matches dietary restrictions provided
+        a text 'breakpoint' goes here at the end recipe
+        `,
       },
     ],
   },
@@ -51,7 +57,7 @@ const history = [
     role: "user",
     parts: [
       {
-        text: "If you have multiple recipes for my prompt, label recipes as 'recipe 1, recipe 2, etc' and then use the format I provided above for each recipe. Again, as precise as you can.",
+        text: "Again, the text 'breakpoint' must be included after every recipe.",
       },
     ],
   },
