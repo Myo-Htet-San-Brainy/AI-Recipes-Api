@@ -51,6 +51,38 @@ const history = [
     role: "user",
     parts: [
       {
+        text: "If you have multiple recipes for my prompt, label recipes as 'recipe 1, recipe 2, etc' and then use the format I provided above for each recipe. Again, as precise as you can.",
+      },
+    ],
+  },
+  {
+    role: "model",
+    parts: [
+      {
+        text: "OK.",
+      },
+    ],
+  },
+  {
+    role: "user",
+    parts: [
+      {
+        text: "Although it is not a must, it is recommended to return two to three recipes for my prompts.",
+      },
+    ],
+  },
+  {
+    role: "model",
+    parts: [
+      {
+        text: "OK.",
+      },
+    ],
+  },
+  {
+    role: "user",
+    parts: [
+      {
         text: "If you can not provide the answer for any(any) reason, you must response 'Sorry, I can't seem to find any recipes.'.",
       },
     ],
