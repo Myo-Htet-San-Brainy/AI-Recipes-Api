@@ -1,9 +1,11 @@
-export function generateRecipes(req, res) {
-  const { ingredients, restrictions } = req.body;
+import { generateRecipesHelper } from "../utils/aiHelper.js";
 
-  res.send("some recipes");
+export async function generateRecipes(req, res) {
+  const { ingredients, restrictions } = req.body;
+  const recipesText = await generateRecipesHelper(ingredients, restrictions);
+  res.status(200).json({ data: recipesText });
 }
 
-export function generateRecipesWithImageInput(req, res) {
-  res.send("some recipes generated from ingredients of image");
+export function generateIngredients(req, res) {
+  res.send("some ingredients");
 }

@@ -10,6 +10,7 @@
   "author": "Technophilia Lab",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.5.0",
     "@types/jest": "^29.5.12",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
