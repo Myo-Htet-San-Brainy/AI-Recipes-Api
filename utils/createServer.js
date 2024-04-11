@@ -3,6 +3,7 @@ import {
   generateIngredients,
   generateRecipes,
 } from "../controllers/recipesController.js";
+import errorHandlerMiddleware from "../middleware/errorHandlerMiddleware.js";
 
 const server = express();
 
@@ -13,5 +14,7 @@ server.get("/", (req, res) => {
 });
 server.use("/api/v1/generateRecipes", generateRecipes);
 server.use("/api/v1/generateIngredients", generateIngredients);
+
+server.use(errorHandlerMiddleware);
 
 export default server;
