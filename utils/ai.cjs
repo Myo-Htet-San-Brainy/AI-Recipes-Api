@@ -31,15 +31,16 @@ function fileToGenerativePart(path, mimeType) {
   };
 }
 
-async function imageRun() {
+async function imageRun(inputImage) {
   // For text-and-image input (multimodal), use the gemini-pro-vision model
   const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
-  const prompt = "Give me ingredients from the provided image.";
+  const prompt =
+    "From the provided image, return or response only names of ingredients.That is, without bullets, without new line characters, without 'ingredients' title, without '*' characters, just ingredients' names with single space between them.";
 
   const result = await model.generateContent([
     prompt,
-    fileToGenerativePart("image1.png", "image/png"),
+    fileToGenerativePart(inputImage.tempFilePath, inputImage.mimetype),
   ]);
   const response = await result.response;
   console.log("imageRun response:", response);
