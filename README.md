@@ -1,3 +1,8 @@
+This is an api built with express.js and powered by Google GEMINI api.
+Using this api, 
+1. You can generate recipes by providing ingredients and dietary restrictions.
+2. You can generate ingredients by providing an image containing ingredients.
+
 To run the project - 
 1. Clone the repo
 2. npm i
