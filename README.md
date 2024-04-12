@@ -17,19 +17,8 @@ body - {
 }
 
 To generate ingredients - POST http://localhost:5000/api/v1/generateIngredients
-Example demonstrating requirements for this api
-<html>
-  <body>
-    <form ref='uploadForm' 
-      id='uploadForm' 
-      action='http://localhost:5000/api/v1/generateIngredients' 
-      method='post' 
-      encType="multipart/form-data">  <= don't forget this
-        <input type="file" name="foo" />  <= value of name attribute must be 'foo'
-        <input type='submit' value='Upload!' />
-    </form>     
-  </body>
-</html>
-
-
+Requirements for this api
+- You must upload an image of ingredients to above api using browser client or postman.
+- For content-type header, "multipart/form-data" must be provided.
+- value of property name of the image must be 'foo'. For eg, when using browser client, input type="file" name="foo" .
 
